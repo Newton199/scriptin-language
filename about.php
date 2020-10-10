@@ -21,7 +21,7 @@ include 'includes/header.php'
 
 <?php
 
-if(!isset ($_COOKIE["$cookie_name"]))
+if(!isset ($_COOKIE[$cookie_name]))
 {
 	echo "Cookie name is not set";
 
@@ -29,7 +29,7 @@ if(!isset ($_COOKIE["$cookie_name"]))
 
 else{
 	echo "Cookie".$Cookie_name."is set.";
-	 echo "and the value is ".$_COOKIE[$cookie_value];
+	 echo "and the value is ".$cookie_value;
 }
 
 
