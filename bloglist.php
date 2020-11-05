@@ -5,27 +5,55 @@ include_once'config/db_conn.php';
 
 include 'includes/header.php'
 ?>
-<h3><a href="addblog.php">create a blog</a></h3> "
+<h3><a href="hotel.php">Booking </a></h3> "
 <?php
 
-$sqlquery ="SELECT*FROM blog;";
+$sqlquery ="SELECT*FROM hotel;";
 
 $data =mysqli_query($conn,$sqlquery );
 
 foreach($data as $unitdata):?>
+	<h5>
+		<?php
+		echo $unitdata['id'];
+		?>
+	</h5>
 <h5>
  <?php
-	echo $unitdata['id'];?>
+	echo $unitdata['name'];?>
 </h5>
 <h1>
  <?php
-	echo $unitdata['title'];?>
+	echo $unitdata['address'];?>
 </h1
 
-<p>
+<h3>
  <?php
-	echo $unitdata['content'];?>
-</p>
+	echo $unitdata['contract'];?>
+</h3>
+
+<h4>
+	<?php
+	echo $unitdata['email'];
+	?>
+</h4>
+
+<h3>
+	<?php
+	echo $unitdata['room'];
+	?>
+</h3>
+
+<h4>
+	<?php
+	echo $unitdata['date'];
+	?>
+</h4>
+
+<h2>
+	<?php
+	echo $unitdata['days'];
+	</h2>
 
 <a href="#">Read More</a>
 
@@ -44,7 +72,7 @@ foreach($data as $unitdata):?>
 <br>
 <br>
 
-<h3> This is the body section of web page and here lies the main  content.</h3>
+
 <br>
 <br>
 <br>
